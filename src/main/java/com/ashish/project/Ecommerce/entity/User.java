@@ -16,7 +16,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "E_USER", schema = "ECOM")
+@Table(name = "USERS", schema = "ECOM")
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "productDetailsCache")
 public class User {

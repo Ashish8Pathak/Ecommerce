@@ -1,5 +1,10 @@
 package com.ashish.project.Ecommerce.dto;
 
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
 public class ProductDTO {
 
 	private Integer id;
@@ -17,32 +22,6 @@ public class ProductDTO {
 	}
 	
 	
-	public ProductDTO() {}
-
-
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Double getPrice() {
-		return price;
-	}
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-	public String getCategory() {
-		return category;
-	}
-	public void setCategory(String category) {
-		this.category = category;
-	}
+	
 
 }

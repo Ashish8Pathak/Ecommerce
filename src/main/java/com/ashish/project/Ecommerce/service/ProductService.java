@@ -29,12 +29,14 @@ public class ProductService {
 		List<Product> listOfProductByName = productRepo.findByProductNameContainingIgnoreCase(name);
 
 		for (Product product : listOfProductByName) {
-			ProductDTO productDTO = new ProductDTO();
-
-			productDTO.setId(product.getProductId());
-			productDTO.setName(product.getProductName());
-			productDTO.setPrice(product.getPrice());
-			productDTO.setCategory(product.getCategory().getCategory());
+			
+			
+			ProductDTO productDTO = ProductDTO.builder()
+										.id(product.getProductId())
+										.name(product.getProductName())
+										.price(product.getPrice())
+										.category(product.getCategory().getCategory())
+										.build();
 
 			responseList.add(productDTO);
 		}
